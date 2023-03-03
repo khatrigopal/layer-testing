@@ -2,17 +2,7 @@ provider "aws" {
   region = "us-east-1" # Change to your desired region
 }
 
-variable "layer_name" {
-  type = string
-}
 
-variable "s3_bucket_name" {
-  type = string
-}
-
-variable "s3_key_prefix" {
-  type = string
-}
 
 data "archive_file" "layer_zip" {
   type        = "zip"
