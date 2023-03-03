@@ -1,9 +1,9 @@
 module "my_lambda_layer" {
-  source = "./module/layer"
+  source = "./modules/layer"
 
   layer_name      = "my-layer"
   s3_bucket_name  = "my-bucket"
-  s3_key_prefix   = "path/to/my-layer"
+  s3_key_prefix   = "layers/my-layer"
 
 }
 
