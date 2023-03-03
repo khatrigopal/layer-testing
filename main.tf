@@ -1,5 +1,5 @@
 module "my_lambda_layer" {
-  source = "./lambda-layer-module"
+  source = "./module/layer"
 
   layer_name      = "my-layer"
   s3_bucket_name  = "my-bucket"
