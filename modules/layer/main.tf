@@ -10,7 +10,7 @@ data "archive_file" "layer_zip" {
   output_path = "${path.module}/layer.zip"
 }
 
-resource "aws_s3_bucket_object" "layer_zip" {
+resource "aws_s3_object" "layer_zip" {
   bucket = var.s3_bucket_name
   key    = "${var.s3_key_prefix}/${var.layer_name}.zip"
   source = data.archive_file.layer_zip.output_path
